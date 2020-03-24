@@ -39,8 +39,8 @@ class VendingMachine {
     return arrOfChange;
   }
 
-  input(coins, notes) {
-    const totalMoney = this.sumInput(coins) + this.sumInput(notes);
+  input(arrOfCoins, arrOfNotes) {
+    const totalMoney = this.sumInput(arrOfCoins) + this.sumInput(arrOfNotes);
     const orangeJuiceOutput = this.checkSufficientMoney(totalMoney);
     const output = orangeJuiceOutput.concat(this.dispenseChange(totalMoney));
     return output;
